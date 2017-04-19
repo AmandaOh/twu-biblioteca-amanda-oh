@@ -19,6 +19,20 @@ public class BookList {
         bookList.add(book4);
     }
 
+    public Book getBook(String selection) throws Exception {
+        int index;
+        Book book;
+        try {
+            index = Integer.parseInt(selection) - 1;
+            book = bookList.get(index);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            book = null;
+        } catch (NumberFormatException e) {
+            throw e;
+        }
+        return book;
+    }
+
     public String toString() {
         StringBuilder bookTable = new StringBuilder();
         for (int i = 0; i < bookList.size(); i++) {

@@ -31,4 +31,12 @@ public class MainMenuTest {
     public void getOptionForCommandXShouldReturnExit() {
         assertEquals("exit", menu.getOption("x"));
     }
+
+    @Test
+    public void removeBookListOptionDeletesOptionFromMainMenu() {
+        menu.removeOption("1");
+        assertFalse(menu.getOptions().containsValue("book list"));
+        assertTrue(menu.getOptions().containsValue("exit"));
+    }
+
 }

@@ -10,8 +10,6 @@ public class MainMenu {
     public MainMenu() {
         addOption("1", "Book List");
         addOption("x", "Exit");
-//        options.put("1", "Book List");
-//        options.put("x", "exit");
     }
 
     private void addOption(String shortCommand, String option) {
@@ -38,4 +36,7 @@ public class MainMenu {
         return menuOptions.toString();
     }
 
+    public void removeOption(String shortCommand) {
+        options.remove(shortCommand.toLowerCase());
+    }
 }

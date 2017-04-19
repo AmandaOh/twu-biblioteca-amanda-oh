@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class BibliotecaApp {
 
-
     public String getGreeting() {
         return "Hi there, welcome to our library.";
     }
@@ -30,9 +29,10 @@ public class BibliotecaApp {
                 System.out.println("\n");
                 BookList booklist = new BookList();
                 System.out.println(booklist.toString());
+                menu.removeOption(parsedInput);
             }
             System.out.println(menu.toString());
-            System.out.print("Please key your selection here: ");
+            System.out.print("Number of Book I would like to check out: ");
             userInput = scanner.next();
             parsedInput = CommandLineInputHelper.parseInput(userInput);
             selectedOption = menu.getOption(parsedInput);
