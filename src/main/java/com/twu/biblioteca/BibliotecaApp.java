@@ -17,21 +17,25 @@ public class BibliotecaApp {
 
         MainMenu menu = new MainMenu();
         System.out.println(menu.toString());
-        System.out.print("Your selection: ");
+        System.out.print("Please key your selection here: ");
 
         Scanner scanner = new Scanner(System.in);
         String userInput = scanner.next();
+        String parsedInput = CommandLineInputHelper.parseInput(userInput);
+        String selectedOption = menu.getOption(parsedInput);
 
-        while (!userInput.equals(CommandLineInputHelper.exit())) {
-            String parsedInput = CommandLineInputHelper.parseInput(userInput);
-            System.out.println("Selected " + menu.getOption(parsedInput));
-            if (menu.getOption(parsedInput).equals("Book List")) {
+        while (!selectedOption.equals("exit")) {
+            System.out.println("Selected " + selectedOption);
+            if (selectedOption.equals("book list")) {
+                System.out.println("\n");
                 BookList booklist = new BookList();
                 System.out.println(booklist.toString());
             }
             System.out.println(menu.toString());
-            System.out.print("Your selection: ");
+            System.out.print("Please key your selection here: ");
             userInput = scanner.next();
+            parsedInput = CommandLineInputHelper.parseInput(userInput);
+            selectedOption = menu.getOption(parsedInput);
         }
     }
 }

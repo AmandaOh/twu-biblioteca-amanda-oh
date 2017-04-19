@@ -14,7 +14,7 @@ public class MainMenuTest {
 
     @Test
     public void getOption1shouldReturnBookListOption() {
-        assertEquals("Book List", menu.getOption("1"));
+        assertEquals("book list", menu.getOption("1"));
     }
 
     @Test

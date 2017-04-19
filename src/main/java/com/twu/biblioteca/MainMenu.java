@@ -8,8 +8,14 @@ public class MainMenu {
     Map<String, String> options = new HashMap<String, String>();
 
     public MainMenu() {
-        options.put("1", "Book List");
-        options.put("x", "exit");
+        addOption("1", "Book List");
+        addOption("x", "Exit");
+//        options.put("1", "Book List");
+//        options.put("x", "exit");
+    }
+
+    private void addOption(String shortCommand, String option) {
+        options.put(shortCommand.toLowerCase(), option.toLowerCase());
     }
 
 

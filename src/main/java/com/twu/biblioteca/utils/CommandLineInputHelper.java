@@ -7,9 +7,4 @@ public abstract class CommandLineInputHelper {
         return commandInput;
     }
 
-    public static String exit() {
-        String exitCommand = "x";
-        return exitCommand;
-    }
-
 }

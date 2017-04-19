@@ -20,5 +20,5 @@ public class CommandLineInputHelperTest {
     public void returnsString1WhenUserInputsAnyStringStartingWith1() {
         assertEquals("1", CommandLineInputHelper.parseInput("1sdkgfd"));
     }
-    
+
 }
