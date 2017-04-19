@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.twu.biblioteca.BookListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-04-18T07:44:04" hostname="sg-6.local" time="0.0">
+<testsuite name="com.twu.biblioteca.BookListTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-04-19T13:35:31" hostname="sg-6.local" time="0.001">
   <properties/>
-  <testcase name="getAllBooks" classname="com.twu.biblioteca.BookListTest" time="0.0"/>
+  <testcase name="getBook0ReturnsNullObject" classname="com.twu.biblioteca.BookListTest" time="0.0"/>
+  <testcase name="getBook1ReturnsHeadFirstJavaBook" classname="com.twu.biblioteca.BookListTest" time="0.0"/>
+  <testcase name="getBookRandomStringThrowsNumberFormatException" classname="com.twu.biblioteca.BookListTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

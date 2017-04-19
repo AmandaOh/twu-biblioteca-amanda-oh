@@ -5,15 +5,21 @@ import java.util.Map;
 
 public class MainMenu {
 
-    Map<String, String> options = new HashMap<String, String>();
+    public static final String BOOK_LIST = "Book List";
+    public static final String BOOK_LIST_COMMAND = "1";
+    public static final String EXIT = "Exit";
+    public static final String EXIT_COMMAND = "X";
+    public static final String NO_SUCH_OPTION = "Invalid Option";
+
+    private Map<String, String> options = new HashMap<String, String>();
 
     public MainMenu() {
-        addOption("1", "Book List");
-        addOption("x", "Exit");
+        addOption(BOOK_LIST_COMMAND, BOOK_LIST);
+        addOption(EXIT_COMMAND, EXIT);
     }
 
-    private void addOption(String shortCommand, String option) {
-        options.put(shortCommand.toLowerCase(), option.toLowerCase());
+    public void addOption(String shortCommand, String option) {
+        options.put(shortCommand, option);
     }
 
 
@@ -22,7 +28,8 @@ public class MainMenu {
     }
 
     public String getOption(String s) {
-        String option = options.get(s) == null ? "Invalid Option" : options.get(s);
+        String userInput = s.toUpperCase();
+        String option = options.get(userInput) == null ? NO_SUCH_OPTION : options.get(userInput);
         return option;
     }
 
