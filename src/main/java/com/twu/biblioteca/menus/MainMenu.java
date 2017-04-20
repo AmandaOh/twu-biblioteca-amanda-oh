@@ -1,9 +1,12 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.menus;
+
+import com.twu.biblioteca.BookRepository;
+import com.twu.biblioteca.Router;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainMenu {
+public class MainMenu implements Menu {
 
     public static final String BOOK_LIST = "Book List";
     public static final String BOOK_LIST_COMMAND = "1";
@@ -12,11 +15,15 @@ public class MainMenu {
     public static final String NO_SUCH_OPTION = "Invalid Option";
 
     private Map<String, String> options = new HashMap<String, String>();
+    protected BookRepository books;
+    protected String selectedOption;
 
-    public MainMenu() {
+    public MainMenu(BookRepository books) {
+        this.books = books;
         addOption(BOOK_LIST_COMMAND, BOOK_LIST);
         addOption(EXIT_COMMAND, EXIT);
     }
+
 
     public void addOption(String shortCommand, String option) {
         options.put(shortCommand, option);
@@ -40,10 +47,19 @@ public class MainMenu {
             menuOptions.append(" FOR " + option.getValue());
             menuOptions.append("\n");
         }
-        return menuOptions.toString();
+        return "\n" + menuOptions.toString() + "\n" + "Please key your selection here: ";
     }
 
     public void removeOption(String shortCommand) {
         options.remove(shortCommand.toLowerCase());
+    }
+
+    @Override
+    public String executeRouterRequest(Router router, String input) {
+        selectedOption = this.getOption(input);
+        if(selectedOption == BOOK_LIST) {
+            router.setState(new BookRepositoryMenu(books));
+        }
+        return selectedOption;
     }
 }

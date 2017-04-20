@@ -3,11 +3,11 @@ package com.twu.biblioteca;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class BookList {
+public class BookRepository {
 
     private ArrayList<Book> bookList;
 
-    public BookList() {
+    public BookRepository() {
         bookList = new ArrayList<Book>();
         Book book1 = new Book("Head First Java", new ArrayList<String>(Arrays.asList("Kathy Sierra", "Bert Bates")), 2001);
         bookList.add(book1);
@@ -44,7 +44,7 @@ public class BookList {
             bookTable.append(bookList.get(i).getYear());
             bookTable.append("\n");
         }
-        return bookTable.toString();
+        return "LIST OF BOOKS\n" + bookTable.toString();
     }
 
 }

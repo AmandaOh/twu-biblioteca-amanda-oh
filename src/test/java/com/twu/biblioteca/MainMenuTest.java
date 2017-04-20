@@ -1,14 +1,13 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.menus.MainMenu;
 import org.junit.Test;
 
-import static com.twu.biblioteca.MainMenu.BOOK_LIST;
-import static com.twu.biblioteca.MainMenu.EXIT;
-import static com.twu.biblioteca.MainMenu.NO_SUCH_OPTION;
+import static com.twu.biblioteca.menus.MainMenu.*;
 import static org.junit.Assert.*;
 
 public class MainMenuTest {
-        MainMenu menu = new MainMenu();
+        MainMenu menu = new MainMenu(new BookRepository());
 
     @Test
     public void getOptionsShouldHaveOnlyTwoOption() throws Exception {
@@ -17,7 +16,7 @@ public class MainMenuTest {
 
     @Test
     public void getOption1shouldReturnBookListOption() {
-        assertEquals(BOOK_LIST, menu.getOption("1"));
+        assertEquals(BOOK_LIST, menu.getOption(BOOK_LIST_COMMAND));
     }
 
     @Test
@@ -32,14 +31,22 @@ public class MainMenuTest {
 
     @Test
     public void getOptionForCommandXShouldReturnExit() {
-        assertEquals(EXIT, menu.getOption("x"));
+        assertEquals(EXIT, menu.getOption(EXIT_COMMAND));
     }
 
     @Test
     public void removeBookListOptionDeletesOptionFromMainMenu() {
-        menu.removeOption("1");
+        menu.removeOption(BOOK_LIST_COMMAND);
         assertFalse(menu.getOptions().containsValue(BOOK_LIST));
         assertTrue(menu.getOptions().containsValue(EXIT));
+    }
+
+    @Test
+    public void executeRequestShouldReturnOnlyValidOptionsForMainMenu() {
+        Router router = new Router(menu);
+        assertEquals(BOOK_LIST, menu.executeRouterRequest(router, BOOK_LIST_COMMAND));
+        assertEquals(EXIT, menu.executeRouterRequest(router, EXIT_COMMAND));
+        assertEquals(NO_SUCH_OPTION, menu.executeRouterRequest(router, "B"));
     }
 
 }

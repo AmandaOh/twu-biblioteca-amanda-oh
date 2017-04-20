@@ -4,9 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class BookListTest {
+public class BookRepositoryTest {
 
-        BookList bl = new BookList();
+        BookRepository bl = new BookRepository();
 
     @Test
     public void getBook1ReturnsHeadFirstJavaBook() throws Exception {
