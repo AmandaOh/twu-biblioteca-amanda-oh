@@ -1,5 +1,7 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.repositories;
 
+import com.twu.biblioteca.Book;
+import com.twu.biblioteca.repositories.BookRepository;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.hasItem;

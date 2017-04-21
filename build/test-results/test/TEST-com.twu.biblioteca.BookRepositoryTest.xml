@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.twu.biblioteca.BookRepositoryTest" tests="8" skipped="0" failures="1" errors="0" timestamp="2017-04-21T07:28:13" hostname="sg-6.local" time="0.006">
+<testsuite name="com.twu.biblioteca.repositories.BookRepositoryTest" tests="8" skipped="0" failures="1" errors="0" timestamp="2017-04-21T07:28:13" hostname="sg-6.local" time="0.006">
   <properties/>
-  <testcase name="checkOutBookReturnsNullIfNOTSuccessful" classname="com.twu.biblioteca.BookRepositoryTest" time="0.0"/>
-  <testcase name="getBook0ReturnsNullObject" classname="com.twu.biblioteca.BookRepositoryTest" time="0.0"/>
-  <testcase name="bookListDoesNotContainBookAfterItIsCheckedOut" classname="com.twu.biblioteca.BookRepositoryTest" time="0.003"/>
-  <testcase name="checkedOutBookListContainsBookThatIsCheckedOut" classname="com.twu.biblioteca.BookRepositoryTest" time="0.0"/>
-  <testcase name="getBook1ReturnsHeadFirstJavaBook" classname="com.twu.biblioteca.BookRepositoryTest" time="0.0"/>
-  <testcase name="returnsBookNameForSuccessfulReturnOfBook" classname="com.twu.biblioteca.BookRepositoryTest" time="0.001">
+  <testcase name="checkOutBookReturnsNullIfNOTSuccessful" classname="com.twu.biblioteca.repositories.BookRepositoryTest" time="0.0"/>
+  <testcase name="getBook0ReturnsNullObject" classname="com.twu.biblioteca.repositories.BookRepositoryTest" time="0.0"/>
+  <testcase name="bookListDoesNotContainBookAfterItIsCheckedOut" classname="com.twu.biblioteca.repositories.BookRepositoryTest" time="0.003"/>
+  <testcase name="checkedOutBookListContainsBookThatIsCheckedOut" classname="com.twu.biblioteca.repositories.BookRepositoryTest" time="0.0"/>
+  <testcase name="getBook1ReturnsHeadFirstJavaBook" classname="com.twu.biblioteca.repositories.BookRepositoryTest" time="0.0"/>
+  <testcase name="returnsBookNameForSuccessfulReturnOfBook" classname="com.twu.biblioteca.repositories.BookRepositoryTest" time="0.001">
     <failure message="org.junit.ComparisonFailure: expected:&lt;[Head First Java]&gt; but was:&lt;[Moby Dick]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[Head First Java]&gt; but was:&lt;[Moby Dick]&gt;
 	at org.junit.Assert.assertEquals(Assert.java:115)
 	at org.junit.Assert.assertEquals(Assert.java:144)
-	at com.twu.biblioteca.BookRepositoryTest.returnsBookNameForSuccessfulReturnOfBook(BookRepositoryTest.java:58)
+	at com.twu.biblioteca.repositories.BookRepositoryTest.returnsBookNameForSuccessfulReturnOfBook(BookRepositoryTest.java:58)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -58,8 +58,8 @@
 	at java.lang.Thread.run(Thread.java:745)
 </failure>
   </testcase>
-  <testcase name="checkOutBookReturnsBookNameWhenSuccessful" classname="com.twu.biblioteca.BookRepositoryTest" time="0.0"/>
-  <testcase name="getBookRandomStringThrowsNumberFormatException" classname="com.twu.biblioteca.BookRepositoryTest" time="0.0"/>
+  <testcase name="checkOutBookReturnsBookNameWhenSuccessful" classname="com.twu.biblioteca.repositories.BookRepositoryTest" time="0.0"/>
+  <testcase name="getBookRandomStringThrowsNumberFormatException" classname="com.twu.biblioteca.repositories.BookRepositoryTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

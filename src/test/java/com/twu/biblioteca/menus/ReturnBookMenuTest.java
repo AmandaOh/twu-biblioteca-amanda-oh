@@ -1,7 +1,7 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.Book;
-import com.twu.biblioteca.BookRepository;
+import com.twu.biblioteca.repositories.BookRepository;
 import com.twu.biblioteca.Router;
 import org.junit.Test;
 
@@ -14,7 +14,7 @@ public class ReturnBookMenuTest {
 
     BookRepository books = new BookRepository();
     ReturnBookMenu menu = new ReturnBookMenu();
-    Router router = new Router(menu);
+    Router router = new Router();
 
     @Test
     public void menuShouldContain2OptionsToGoBackOrExit() {

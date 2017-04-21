@@ -1,6 +1,5 @@
 package com.twu.biblioteca.menus;
 
-import com.twu.biblioteca.BookRepository;
 import com.twu.biblioteca.Router;
 import org.junit.Test;
 
@@ -46,7 +45,7 @@ public class MainMenuTest {
 
     @Test
     public void executeRequestShouldReturnOnlyValidOptionsForMainMenu() {
-        Router router = new Router(menu);
+        Router router = new Router();
         assertEquals(BOOK_LIST, menu.executeRouterRequest(router, BOOK_LIST_COMMAND));
         assertEquals(EXIT, menu.executeRouterRequest(router, EXIT_COMMAND));
         assertEquals(NO_SUCH_OPTION, menu.executeRouterRequest(router, "B"));

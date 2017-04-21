@@ -1,6 +1,7 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.Router;
+import com.twu.biblioteca.repositories.BookRepository;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +15,7 @@ public abstract class Menu {
     public static final String NO_SUCH_OPTION = "Invalid Option";
 
     private Map<String, String> options = new HashMap<String, String>();
+    protected BookRepository books = new BookRepository();
 
     public void addOption(String shortCommand, String option) {
         this.options.put(shortCommand, option);

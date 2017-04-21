@@ -1,7 +1,7 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.menus.BookRepositoryMenu;
 import com.twu.biblioteca.menus.MainMenu;
+import com.twu.biblioteca.repositories.BookRepository;
 import com.twu.biblioteca.utils.CommandLineInputHelper;
 
 import java.util.Scanner;
@@ -16,13 +16,11 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         BibliotecaApp app = new BibliotecaApp();
-        BookRepository books = new BookRepository();
 
         System.out.println(app.getGreeting());
 
-        MainMenu menu = new MainMenu();
-        Router router = new Router(menu);
-        System.out.println(menu.toString());
+        Router router = new Router();
+        System.out.println(router.getPrintedResponse());
 
         Scanner scanner = new Scanner(System.in);
         String selectedOption = readSelectedOption(router, scanner);

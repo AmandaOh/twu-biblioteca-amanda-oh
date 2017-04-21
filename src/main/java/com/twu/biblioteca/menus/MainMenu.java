@@ -1,10 +1,9 @@
 package com.twu.biblioteca.menus;
 
-import com.twu.biblioteca.BookRepository;
 import com.twu.biblioteca.Router;
 
-import java.util.HashMap;
-import java.util.Map;
+import static com.twu.biblioteca.Router.BOOK_REPOSITORY_MENU_INDEX;
+import static com.twu.biblioteca.Router.RETURN_BOOK_MENU_INDEX;
 
 public class MainMenu extends Menu {
 
@@ -13,7 +12,6 @@ public class MainMenu extends Menu {
     public static final String RETURN_BOOK = "Return Book";
     public static final String RETURN_BOOK_COMMAND = "R";
 
-    private Map<String, String> options = new HashMap<String, String>();
     protected String selectedOption;
 
     public MainMenu() {
@@ -26,9 +24,9 @@ public class MainMenu extends Menu {
     public String executeRouterRequest(Router router, String input) {
         selectedOption = this.getOption(input);
         if(selectedOption == BOOK_LIST) {
-            router.setState(new BookRepositoryMenu());
+            router.setState(BOOK_REPOSITORY_MENU_INDEX);
         } else if (selectedOption == RETURN_BOOK) {
-            router.setState(new ReturnBookMenu());
+            router.setState(RETURN_BOOK_MENU_INDEX);
         }
         return selectedOption;
     }

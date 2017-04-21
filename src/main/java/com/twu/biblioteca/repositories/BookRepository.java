@@ -1,4 +1,6 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.repositories;
+
+import com.twu.biblioteca.Book;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,6 +20,7 @@ public class BookRepository {
         Book book4 = new Book ("Pride and Prejudice", new ArrayList<String>(Arrays.asList("Jane Austen")), 2002);
         books.add(book4);
     }
+
 
     public ArrayList<Book> getBooks() {
         return books;
