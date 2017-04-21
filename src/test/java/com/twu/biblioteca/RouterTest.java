@@ -12,12 +12,12 @@ import static org.junit.Assert.*;
 public class RouterTest {
 
     BookRepository books = new BookRepository();
-    BookRepositoryMenu bookListMenu = new BookRepositoryMenu(books);
+    BookRepositoryMenu bookListMenu = new BookRepositoryMenu();
     Router router = new Router(bookListMenu);
 
     @Test
     public void getsMenuOptionWhenOnMainPage() throws Exception {
-        router = new Router (new MainMenu(books));
+        router = new Router (new MainMenu());
         assertEquals(BOOK_LIST, router.getSelectedOption(BOOK_LIST_COMMAND));
         assertEquals(EXIT, router.getSelectedOption(EXIT_COMMAND));
     }

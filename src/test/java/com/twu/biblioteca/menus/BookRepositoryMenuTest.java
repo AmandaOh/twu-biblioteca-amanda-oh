@@ -1,5 +1,7 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.menus;
 
+import com.twu.biblioteca.BookRepository;
+import com.twu.biblioteca.Router;
 import com.twu.biblioteca.menus.BookRepositoryMenu;
 import org.junit.Test;
 
@@ -8,7 +10,7 @@ import static org.junit.Assert.*;
 
 public class BookRepositoryMenuTest {
 
-    BookRepositoryMenu menu = new BookRepositoryMenu(new BookRepository());
+    BookRepositoryMenu menu = new BookRepositoryMenu();
     Router router = new Router(menu);
 
     @Test

@@ -1,12 +1,12 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.menus.MainMenu;
+import com.twu.biblioteca.menus.Menu;
 
 public class Router {
 
-    private MainMenu currentMenu;
+    private Menu currentMenu;
 
-    public Router(MainMenu menu) {
+    public Router(Menu menu) {
         currentMenu = menu;
     }
 
@@ -14,7 +14,7 @@ public class Router {
         return currentMenu.executeRouterRequest(this, input);
     }
 
-    public void setState(MainMenu state){
+    public void setState(Menu state){
         currentMenu = state;
     }
 

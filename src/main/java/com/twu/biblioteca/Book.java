@@ -4,9 +4,14 @@ import java.util.ArrayList;
 
 public class Book {
 
+    public enum Status {
+        AVAILABLE, NOT_AVAILABLE;
+    }
+
     private String name;
     private ArrayList<String> author;
     private int year;
+    private Status status = Status.AVAILABLE;
 
     public Book (String name, ArrayList<String> author, int year) {
         this.name = name;
@@ -24,5 +29,13 @@ public class Book {
 
     public int getYear() {
         return year;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }

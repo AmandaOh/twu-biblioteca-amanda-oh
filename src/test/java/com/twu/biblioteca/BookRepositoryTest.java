@@ -2,11 +2,6 @@ package com.twu.biblioteca;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import static com.twu.biblioteca.BookRepository.FAIL_CHECK_OUT_MESSAGE;
-import static com.twu.biblioteca.BookRepository.SUCCESSFUL_CHECK_OUT;
 import static org.hamcrest.CoreMatchers.hasItem;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.*;
@@ -21,42 +16,46 @@ public class BookRepositoryTest {
     }
 
     @Test
-    public void getBook0ReturnsNullObject() throws Exception{
+    public void getBook0ReturnsNullObject() throws Exception {
         assertNull(bl.getBook("0"));
     }
 
-    @Test (expected = NumberFormatException.class)
+    @Test(expected = NumberFormatException.class)
     public void getBookRandomStringThrowsNumberFormatException() throws Exception {
         bl.getBook("asdsdf");
     }
 
     @Test
-    public void checkOutBookReturnsBookNameWhenSuccessful() {
-        Book book1;
-        try {
-            book1 = bl.getBook("1");
-        } catch (Exception e) {
-            book1 = null;
-        }
+    public void checkOutBookReturnsBookNameWhenSuccessful() throws Exception {
+        Book book1 = bl.getBook("1");
         assertEquals(book1.getName(), bl.checkOutBook("1"));
     }
 
     @Test
-    public void checkOutBookReturnsNullIfNOTSuccessful(){
+    public void checkOutBookReturnsNullIfNOTSuccessful() {
         assertNull(bl.checkOutBook("23948"));
         assertNull(bl.checkOutBook("sdrgkjn"));
     }
 
     @Test
-    public void bookListDoesNotContainBookAfterItIsCheckedOut() {
-        Book book1;
-        try {
-            book1 = bl.getBook("1");
-        } catch (Exception e) {
-            book1 = null;
-        }
+    public void bookListDoesNotContainBookAfterItIsCheckedOut() throws Exception {
+        Book book1 = bl.getBook("1");
         bl.checkOutBook("1");
-        assertThat(bl.getAllBooks(), not(hasItem(book1)));
+        assertThat(bl.getBooks(), not(hasItem(book1)));
+    }
+
+    @Test
+    public void checkedOutBookListContainsBookThatIsCheckedOut() throws Exception {
+        Book book1 = bl.getBook("1");
+        bl.checkOutBook("1");
+        assertThat(bl.getCheckedOutBooks(), hasItem(book1));
+    }
+
+    @Test
+    public void returnsBookNameForSuccessfulReturnOfBook() throws Exception {
+        Book book1 = bl.getBook("1");
+        bl.checkOutBook("1");
+        assertEquals(book1.getName(), bl.returnBook("1"));
     }
 
 

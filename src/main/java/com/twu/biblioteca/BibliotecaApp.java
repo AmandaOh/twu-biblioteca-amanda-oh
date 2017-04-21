@@ -20,7 +20,7 @@ public class BibliotecaApp {
 
         System.out.println(app.getGreeting());
 
-        MainMenu menu = new MainMenu(books);
+        MainMenu menu = new MainMenu();
         Router router = new Router(menu);
         System.out.println(menu.toString());
 

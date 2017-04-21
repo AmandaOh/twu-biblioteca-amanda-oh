@@ -1,17 +1,20 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.menus;
 
-import com.twu.biblioteca.menus.MainMenu;
+import com.twu.biblioteca.BookRepository;
+import com.twu.biblioteca.Router;
 import org.junit.Test;
 
 import static com.twu.biblioteca.menus.MainMenu.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class MainMenuTest {
-        MainMenu menu = new MainMenu(new BookRepository());
+    MainMenu menu = new MainMenu();
 
     @Test
-    public void getOptionsShouldHaveOnlyTwoOption() throws Exception {
-        assertTrue(menu.getOptions().size() == 2);
+    public void getOptionsShouldHaveOnlyThreeOption() throws Exception {
+        assertTrue(menu.getOptions().size() == 3);
     }
 
     @Test
