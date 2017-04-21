@@ -22,4 +22,11 @@ public class BookRepositoryMenuTest {
         String userInput = "B";
         assertEquals(GO_BACK, menu.executeRouterRequest(router, userInput));
     }
+
+    @Test
+    public void executeRequestReturnsNullWhenUserSelectsBookNotAvailable() {
+        assertNull(menu.executeRouterRequest(router, "23948"));
+    }
+
+
 }

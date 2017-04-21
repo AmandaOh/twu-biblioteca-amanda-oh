@@ -2,12 +2,16 @@ package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.BookRepository;
 import com.twu.biblioteca.Router;
-import com.twu.biblioteca.menus.MainMenu;
 
 public class BookRepositoryMenu extends MainMenu {
 
     public static final String GO_BACK = "Back";
     public static final String GO_BACK_COMMAND = "B";
+
+    public static final String FAIL_CHECK_OUT_MESSAGE = "Selected book is not available.";
+    public static final String SUCCESSFUL_CHECK_OUT_MESSAGE = "Checkout successful!";
+
+    private String checkOutMessage = "";
 
     public BookRepositoryMenu(BookRepository books) {
         super(books);
@@ -16,22 +20,28 @@ public class BookRepositoryMenu extends MainMenu {
     }
 
     public String executeRouterRequest(Router router, String input) {
-        this.selectedOption= this.getOption(input);
+        selectedOption = this.getOption(input);
         if (selectedOption == NO_SUCH_OPTION) {
-            try {
-                selectedOption = books.getBook(input).getName();
-            } catch (Exception e) {
-                selectedOption = "Please select a valid option.";
-            }
+            selectedOption = books.checkOutBook(input);
+            displayCheckOutMessage(selectedOption);
         } else if (selectedOption == GO_BACK) {
             router.setState(new MainMenu(books));
         }
         return selectedOption;
     }
 
+    private void displayCheckOutMessage(String selectedOption) {
+        if (selectedOption == null) {
+            checkOutMessage = FAIL_CHECK_OUT_MESSAGE;
+        } else {
+            checkOutMessage = "You have selected " + selectedOption + ". " + SUCCESSFUL_CHECK_OUT_MESSAGE;
+        }
+
+    }
+
     public String toString() {
-        String bookList = this.books.toString();
-        return "\n" + bookList + "\n" + "SELECT book number FOR Check Out. \n" + super.toString();
+        String bookList = books.toString();
+        return "\n" + bookList + "\n" + checkOutMessage + "\n" + "SELECT book number FOR Check Out. \n" + super.toString();
     }
 
 }
