@@ -1,8 +1,8 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.Book;
-import com.twu.biblioteca.repositories.BookRepository;
 import com.twu.biblioteca.Router;
+import com.twu.biblioteca.repositories.CheckedOutBooksRepository;
 import org.junit.Test;
 
 import static com.twu.biblioteca.menus.BookRepositoryMenu.GO_BACK;
@@ -12,7 +12,6 @@ import static org.junit.Assert.*;
 
 public class ReturnBookMenuTest {
 
-    BookRepository books = new BookRepository();
     ReturnBookMenu menu = new ReturnBookMenu();
     Router router = new Router();
 
@@ -35,8 +34,11 @@ public class ReturnBookMenuTest {
 
     @Test
     public void executeRouterRequestShouldReturnBookNameWhenReturnIsSuccessful() throws Exception {
-        Book book1 = books.getBook("1");
+        CheckedOutBooksRepository repo = new CheckedOutBooksRepository();
+        Book book1 = repo.getBook("1");
         assertEquals(book1.getName(), menu.executeRouterRequest(router, "1"));
     }
+
+
 
 }

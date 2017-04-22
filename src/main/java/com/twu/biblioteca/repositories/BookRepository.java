@@ -1,41 +1,25 @@
 package com.twu.biblioteca.repositories;
 
 import com.twu.biblioteca.Book;
+import com.twu.biblioteca.InMemoryBooksDatabase;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
-public class BookRepository {
+import static com.twu.biblioteca.Book.Status.AVAILABLE;
+import static com.twu.biblioteca.Book.Status.NOT_AVAILABLE;
 
-    private ArrayList<Book> books = new ArrayList<Book>();
-    private ArrayList<Book> checkedOutBooks = new ArrayList<Book>();
+public class BookRepository implements Repository {
 
-    public BookRepository() {
-        Book book1 = new Book("Head First Java", new ArrayList<String>(Arrays.asList("Kathy Sierra", "Bert Bates")), 2001);
-        books.add(book1);
-        Book book2 = new Book("Moby Dick", new ArrayList<String>(Arrays.asList("Herman Melville")), 1851);
-        books.add(book2);
-        Book book3 = new Book ("The Great Gatsby", new ArrayList<String>(Arrays.asList("F. Scott Fitzgerald")), 2004);
-        books.add(book3);
-        Book book4 = new Book ("Pride and Prejudice", new ArrayList<String>(Arrays.asList("Jane Austen")), 2002);
-        books.add(book4);
-    }
+    private List<Book> availableBooks =InMemoryBooksDatabase.getBooks().stream().filter(book -> book.getStatus() == AVAILABLE).collect(Collectors.toList());
 
-
-    public ArrayList<Book> getBooks() {
-        return books;
-    }
-
-    public ArrayList<Book> getCheckedOutBooks() {
-        return checkedOutBooks;
-    }
-
+    @Override
     public Book getBook(String selection) throws Exception {
         int index;
         Book book;
         try {
             index = Integer.parseInt(selection) - 1;
-            book = books.get(index);
+            book = availableBooks.get(index);
         } catch (ArrayIndexOutOfBoundsException e) {
             book = null;
         } catch (NumberFormatException e) {
@@ -44,43 +28,36 @@ public class BookRepository {
         return book;
     }
 
-    public String toString() {
-        StringBuilder bookTable = new StringBuilder();
-        for (int i = 0; i < books.size(); i++) {
-            bookTable.append(Integer.toString(i + 1) + "| ");
-            bookTable.append(books.get(i).getName());
-            bookTable.append(" ");
-            bookTable.append(books.get(i).getAuthor());
-            bookTable.append(" ");
-            bookTable.append(books.get(i).getYear());
-            bookTable.append("\n");
-        }
-        return "LIST OF BOOKS\n" + bookTable.toString();
-    }
-
     public String checkOutBook(String bookNumber) {
         String bookName;
         try {
             Book bookToCheckOut = getBook(bookNumber);
-            books.remove(bookToCheckOut);
-            checkedOutBooks.add(bookToCheckOut);
             bookName = bookToCheckOut.getName();
+            bookToCheckOut.setStatus(NOT_AVAILABLE);
         } catch (Exception e){
             bookName = null;
         }
         return bookName;
     }
 
-    public String returnBook(String bookNumber) {
-        String bookName;
-        try {
-            Book bookToReturn = getBook(bookNumber);
-            checkedOutBooks.remove(bookToReturn);
-            books.add(bookToReturn);
-            bookName = bookToReturn.getName();
-        } catch (Exception e) {
-            bookName = null;
+    @Override
+    public String toString() {
+        availableBooks = InMemoryBooksDatabase.getBooks().stream().filter(book -> book.getStatus() == AVAILABLE).collect(Collectors.toList());
+        StringBuilder bookTable = new StringBuilder();
+        for (int i = 0; i < availableBooks.size(); i++) {
+            bookTable.append(Integer.toString(i + 1) + "| ");
+            bookTable.append(availableBooks.get(i).getName());
+            bookTable.append(" ");
+            bookTable.append(availableBooks.get(i).getAuthor());
+            bookTable.append(" ");
+            bookTable.append(availableBooks.get(i).getYear());
+            bookTable.append(" ");
+            bookTable.append(availableBooks.get(i).getStatus());
+            bookTable.append("\n");
         }
-        return bookName;
+        return "LIST OF BOOKS\n" + bookTable.toString();
     }
+
+
+
 }

@@ -12,6 +12,7 @@ public class BookRepositoryTest {
 
     BookRepository bl = new BookRepository();
 
+    //Test to run on its own
     @Test
     public void getBook1ReturnsHeadFirstJavaBook() throws Exception {
         assertEquals("Head First Java", bl.getBook("1").getName());
@@ -40,25 +41,9 @@ public class BookRepositoryTest {
     }
 
     @Test
-    public void bookListDoesNotContainBookAfterItIsCheckedOut() throws Exception {
+    public void checkedOutBookStatusIsAvailableAfterCheckOut() throws Exception {
         Book book1 = bl.getBook("1");
         bl.checkOutBook("1");
-        assertThat(bl.getBooks(), not(hasItem(book1)));
+        assertTrue(book1.getStatus() == Book.Status.NOT_AVAILABLE);
     }
-
-    @Test
-    public void checkedOutBookListContainsBookThatIsCheckedOut() throws Exception {
-        Book book1 = bl.getBook("1");
-        bl.checkOutBook("1");
-        assertThat(bl.getCheckedOutBooks(), hasItem(book1));
-    }
-
-    @Test
-    public void returnsBookNameForSuccessfulReturnOfBook() throws Exception {
-        Book book1 = bl.getBook("1");
-        bl.checkOutBook("1");
-        assertEquals(book1.getName(), bl.returnBook("1"));
-    }
-
-
 }

@@ -11,11 +11,6 @@ public class BookRepositoryMenuTest {
     BookRepositoryMenu menu = new BookRepositoryMenu();
     Router router = new Router();
 
-    @Test
-    public void executeRequestRetrievesBookAccordingToRouterRequest() {
-        String userInput = "1";
-        assertEquals("Head First Java", menu.executeRouterRequest(router, userInput));
-    }
 
     @Test
     public void executeRequestReturnsBackWhenUserSelectsBackCommand() {
@@ -26,6 +21,13 @@ public class BookRepositoryMenuTest {
     @Test
     public void executeRequestReturnsNullWhenUserSelectsBookNotAvailable() {
         assertNull(menu.executeRouterRequest(router, "23948"));
+    }
+
+    //Test to run on its own
+    @Test
+    public void executeRequestRetrievesBookAccordingToRouterRequest() {
+        String userInput = "1";
+        assertEquals("Head First Java", menu.executeRouterRequest(router, userInput));
     }
 
 

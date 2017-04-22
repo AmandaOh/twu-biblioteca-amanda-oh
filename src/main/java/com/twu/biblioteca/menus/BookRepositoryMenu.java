@@ -9,6 +9,8 @@ public class BookRepositoryMenu extends Menu {
     public static final String FAIL_CHECK_OUT_MESSAGE = "Selected book is not available.";
     public static final String SUCCESSFUL_CHECK_OUT_MESSAGE = "Thank you enjoy the book!";
 
+    private BookRepository bookRepository = new BookRepository();
+
     private String checkOutMessage = "";
 
     public BookRepositoryMenu() {
@@ -18,9 +20,9 @@ public class BookRepositoryMenu extends Menu {
 
     @Override
     public String executeRouterRequest(Router router, String input) {
-        String selectedOption = this.getOption(input);
+        String selectedOption = getOption(input);
         if (selectedOption == NO_SUCH_OPTION) {
-            selectedOption = books.checkOutBook(input);
+            selectedOption = bookRepository.checkOutBook(input);
             displayCheckOutMessage(selectedOption);
         } else if (selectedOption == GO_BACK) {
             router.setState(MAIN_MENU_INDEX);
@@ -38,7 +40,7 @@ public class BookRepositoryMenu extends Menu {
     }
 
     public String toString() {
-        String bookList = books.toString();
+        String bookList = bookRepository.toString();
         return "\n" +  checkOutMessage + "\n\n" + bookList + "\n" + "SELECT book number FOR Check Out. \n" + super.toString();
     }
 
