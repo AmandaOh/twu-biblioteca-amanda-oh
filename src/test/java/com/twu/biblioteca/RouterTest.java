@@ -14,7 +14,6 @@ import static org.junit.Assert.*;
 
 public class RouterTest {
 
-    BookRepositoryMenu bookListMenu = new BookRepositoryMenu();
     Router router = new Router();
 
     @Test
@@ -25,11 +24,11 @@ public class RouterTest {
     }
 
 
-    @Test
-    public void getsBookNameWhenOnBookRepoPage() {
-        router.setState(BOOK_REPOSITORY_MENU_INDEX);
-        assertEquals("Head First Java", router.getSelectedOption("1"));
-    }
+//    @Test
+//    public void getsBookNameWhenOnBookRepoPage() {
+//        router.setState(BOOK_REPOSITORY_MENU_INDEX);
+//        assertEquals("Head First Java", router.getSelectedOption("1"));
+//    }
 
     @Test
     public void returnsExitValueWhenOnBookRepoPage() {

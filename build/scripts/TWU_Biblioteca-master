@@ -64,7 +64,7 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=$APP_HOME/lib/TWU_Biblioteca-master.jar:$APP_HOME/lib/slf4j-api-1.7.12.jar
+CLASSPATH=$APP_HOME/lib/TWU_Biblioteca-master.jar
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then

@@ -14,13 +14,13 @@ public class InMemoryBooksDatabase {
 
     private static List<Book> initialize() {
         books = new ArrayList<Book>();
-        Book book1 = new Book("Head First Java", new ArrayList<String>(Arrays.asList("Kathy Sierra", "Bert Bates")), 2001);
+        Book book1 = new Book("Head First Java", new ArrayList<>(Arrays.asList("Kathy Sierra", "Bert Bates")), 2001);
         books.add(book1);
-        Book book2 = new Book("Moby Dick", new ArrayList<String>(Arrays.asList("Herman Melville")), 1851);
+        Book book2 = new Book("Moby Dick", new ArrayList<>(Arrays.asList("Herman Melville")), 1851);
         books.add(book2);
-        Book book3 = new Book ("The Great Gatsby", new ArrayList<String>(Arrays.asList("F. Scott Fitzgerald")), 2004);
+        Book book3 = new Book ("The Great Gatsby", new ArrayList<>(Arrays.asList("F. Scott Fitzgerald")), 2004);
         books.add(book3);
-        Book book4 = new Book ("Pride and Prejudice", new ArrayList<String>(Arrays.asList("Jane Austen")), 2002);
+        Book book4 = new Book ("Pride and Prejudice", new ArrayList<>(Arrays.asList("Jane Austen")), 2002);
         books.add(book4);
         return books;
     }

@@ -9,7 +9,7 @@ public class BookRepositoryMenu extends Menu {
     public static final String FAIL_CHECK_OUT_MESSAGE = "Selected book is not available.";
     public static final String SUCCESSFUL_CHECK_OUT_MESSAGE = "Thank you enjoy the book!";
 
-    private BookRepository bookRepository = new BookRepository();
+    private BookRepository bookRepository = new BookRepository(this);
 
     private String checkOutMessage = "";
 

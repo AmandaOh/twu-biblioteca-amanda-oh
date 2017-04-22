@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.twu.biblioteca.RouterTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2017-04-22T08:30:34" hostname="sg-6.local" time="0.0">
+<testsuite name="com.twu.biblioteca.RouterTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-04-22T14:45:44" hostname="sg-6.local" time="0.0">
   <properties/>
-  <testcase name="getsBookNameWhenOnBookRepoPage" classname="com.twu.biblioteca.RouterTest" time="0.0"/>
   <testcase name="returnsExitValueWhenOnBookRepoPage" classname="com.twu.biblioteca.RouterTest" time="0.0"/>
   <testcase name="getsMenuOptionWhenOnMainPage" classname="com.twu.biblioteca.RouterTest" time="0.0"/>
   <testcase name="returnsBackValueWhenOnBookRepoPage" classname="com.twu.biblioteca.RouterTest" time="0.0"/>

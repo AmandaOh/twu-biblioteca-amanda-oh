@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\TWU_Biblioteca-master.jar;%APP_HOME%\lib\slf4j-api-1.7.12.jar
+set CLASSPATH=%APP_HOME%\lib\TWU_Biblioteca-master.jar
 
 @rem Execute TWU_Biblioteca-master
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %TWU_BIBLIOTECA_MASTER_OPTS%  -classpath "%CLASSPATH%" com.twu.biblioteca.BibliotecaApp %CMD_LINE_ARGS%

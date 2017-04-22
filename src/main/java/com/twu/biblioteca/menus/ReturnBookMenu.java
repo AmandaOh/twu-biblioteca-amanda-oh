@@ -1,7 +1,7 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.Router;
-import com.twu.biblioteca.repositories.CheckedOutBooksRepository;
+import com.twu.biblioteca.repositories.BookRepository;
 
 import static com.twu.biblioteca.Router.MAIN_MENU_INDEX;
 
@@ -10,7 +10,7 @@ public class ReturnBookMenu extends Menu {
     public static final String SUCCESSFUL_RETURN_MESSAGE = "Thank you for returning ";
     public static final String FAIL_RETURN_MESSAGE = "That is not a valid book to return.";
 
-    private CheckedOutBooksRepository checkedOutBooksRepository = new CheckedOutBooksRepository();
+    private BookRepository checkedOutBooksRepository = new BookRepository(this);
 
     private String bookReturnMessage = "";
 
@@ -23,7 +23,7 @@ public class ReturnBookMenu extends Menu {
     public String executeRouterRequest(Router router, String input) {
         String selectedOption = getOption(input);
         if (selectedOption == NO_SUCH_OPTION) {
-            selectedOption = checkedOutBooksRepository.returnBook(input);
+            selectedOption = checkedOutBooksRepository.checkOutBook(input);
             displayReturnMessage(selectedOption);
         } else if (selectedOption == GO_BACK) {
             router.setState(MAIN_MENU_INDEX);
