@@ -1,0 +1,3 @@
+Assumptions:
+    - User is only able to check out one book at a time.
+    - User is only able to return one book at a time.

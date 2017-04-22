@@ -1,7 +1,5 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.menus.MainMenu;
-import com.twu.biblioteca.repositories.BookRepository;
 import com.twu.biblioteca.utils.CommandLineInputHelper;
 
 import java.util.Scanner;
@@ -11,7 +9,7 @@ import static com.twu.biblioteca.menus.MainMenu.EXIT;
 public class BibliotecaApp {
 
     public String getGreeting() {
-        return "Hi there, welcome to our library.";
+        return "Hola! Welcome to Biblioteca.";
     }
 
     public static void main(String[] args) {
