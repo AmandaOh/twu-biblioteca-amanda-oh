@@ -1,7 +1,10 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.Router;
+import com.twu.biblioteca.repositories.BookLibrary;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 import static com.twu.biblioteca.menus.MainMenu.*;
 import static org.junit.Assert.assertEquals;
@@ -9,11 +12,12 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class MainMenuTest {
+
     MainMenu menu = new MainMenu();
 
     @Test
-    public void getOptionsShouldHaveOnlyThreeOption() throws Exception {
-        assertTrue(menu.getOptions().size() == 3);
+    public void getOptionsShouldHaveOnlyFourOptions() throws Exception {
+        assertTrue(menu.getOptions().size() == 4);
     }
 
     @Test
@@ -22,8 +26,8 @@ public class MainMenuTest {
     }
 
     @Test
-    public void getOption2shouldReturnInvalidOption() {
-        assertEquals(NO_SUCH_OPTION, menu.getOption("2"));
+    public void getOption10shouldReturnInvalidOption() {
+        assertEquals(NO_SUCH_OPTION, menu.getOption("10"));
     }
 
     @Test
@@ -45,10 +49,18 @@ public class MainMenuTest {
 
     @Test
     public void executeRequestShouldReturnOnlyValidOptionsForMainMenu() {
-        Router router = new Router();
+        BookLibrary library = new BookLibrary(new ArrayList<>());
+        Router router = new Router(library);
         assertEquals(BOOK_LIST, menu.executeRouterRequest(router, BOOK_LIST_COMMAND));
         assertEquals(EXIT, menu.executeRouterRequest(router, EXIT_COMMAND));
-        assertEquals(NO_SUCH_OPTION, menu.executeRouterRequest(router, "B"));
+        assertEquals(NO_SUCH_OPTION, menu.executeRouterRequest(router, "b"));
+        assertEquals(MOVIE_LIST, menu.executeRouterRequest(router, MOVIE_LIST_COMMAND));
     }
+
+    @Test
+    public void getOptionsShouldHaveMoveListOption() {
+        assertTrue(menu.getOptions().containsValue(MOVIE_LIST));
+    }
+
 
 }

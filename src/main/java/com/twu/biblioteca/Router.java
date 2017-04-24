@@ -1,20 +1,20 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.menus.BookRepositoryMenu;
-import com.twu.biblioteca.menus.MainMenu;
-import com.twu.biblioteca.menus.Menu;
-import com.twu.biblioteca.menus.ReturnBookMenu;
+import com.twu.biblioteca.menus.*;
+import com.twu.biblioteca.repositories.BookLibrary;
 
 public class Router {
 
     public static final int MAIN_MENU_INDEX = 0;
     public static final int BOOK_REPOSITORY_MENU_INDEX = 1;
     public static final int RETURN_BOOK_MENU_INDEX = 2;
+    public static final int MOVIE_MENU_INDEX = 3;
 
-    private Menu[] menus = {new MainMenu(), new BookRepositoryMenu(), new ReturnBookMenu()};
+    private Menu[] menus;
     private Menu currentMenu;
 
-    public Router() {
+    public Router(BookLibrary library) {
+        menus = new Menu[]{new MainMenu(), new BookLibraryMenu(library), new ReturnBookMenu(library), new MovieMenu()};
         currentMenu = menus[0];
     }
 

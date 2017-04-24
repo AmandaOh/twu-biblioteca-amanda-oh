@@ -1,7 +1,10 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.models.Book;
+import com.twu.biblioteca.repositories.BookLibrary;
 import com.twu.biblioteca.utils.CommandLineInputHelper;
 
+import java.util.List;
 import java.util.Scanner;
 
 import static com.twu.biblioteca.menus.MainMenu.EXIT;
@@ -17,8 +20,7 @@ public class BibliotecaApp {
 
         System.out.println(app.getGreeting());
 
-        Router router = new Router();
-        System.out.println(router.getPrintedResponse());
+        Router router = initializeApp();
 
         Scanner scanner = new Scanner(System.in);
         String selectedOption = readSelectedOption(router, scanner);
@@ -28,6 +30,14 @@ public class BibliotecaApp {
             selectedOption = readSelectedOption(router, scanner);
         }
 
+    }
+
+    private static Router initializeApp() {
+        List<Book> staticBookData = InMemoryBooksDatabase.getBooks();
+        BookLibrary library = new BookLibrary(staticBookData);
+        Router router = new Router(library);
+        System.out.println(router.getPrintedResponse());
+        return router;
     }
 
     private static String readSelectedOption(Router router, Scanner scanner) {

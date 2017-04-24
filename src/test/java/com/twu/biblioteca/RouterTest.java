@@ -1,20 +1,35 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.menus.BookRepositoryMenu;
-import com.twu.biblioteca.menus.MainMenu;
-import com.twu.biblioteca.repositories.BookRepository;
+import com.twu.biblioteca.models.Book;
+import com.twu.biblioteca.repositories.BookLibrary;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.twu.biblioteca.Router.BOOK_REPOSITORY_MENU_INDEX;
 import static com.twu.biblioteca.Router.MAIN_MENU_INDEX;
-import static com.twu.biblioteca.menus.BookRepositoryMenu.GO_BACK;
-import static com.twu.biblioteca.menus.BookRepositoryMenu.GO_BACK_COMMAND;
+import static com.twu.biblioteca.menus.BookLibraryMenu.CHECK_OUT_BOOK;
+import static com.twu.biblioteca.menus.BookLibraryMenu.GO_BACK;
+import static com.twu.biblioteca.menus.BookLibraryMenu.GO_BACK_COMMAND;
 import static com.twu.biblioteca.menus.MainMenu.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class RouterTest {
 
-    Router router = new Router();
+    List<Book> books = new ArrayList<>();
+    BookLibrary library = new BookLibrary(books);
+    Router router = new Router(library);
+
+//    @Before
+//    public void loadBooksForTestCase() {
+//        Book book1 = new Book("Moneyball", new ArrayList<>(Arrays.asList("Michael Lewis")), 2003);
+//        Book book2 = new Book("The Great Gatsby", new ArrayList<>(Arrays.asList("F. Scott Fitzgerald")), 2004);
+//        Book book3 = new Book("Lean In", new ArrayList<>(Arrays.asList("Sheryl Sandberg")), 2013);
+//        books.add(book1);
+//        books.add(book2);
+//        books.add(book3);
+//    }
 
     @Test
     public void getsMenuOptionWhenOnMainPage() throws Exception {
@@ -24,20 +39,20 @@ public class RouterTest {
     }
 
 
-//    @Test
-//    public void getsBookNameWhenOnBookRepoPage() {
-//        router.setState(BOOK_REPOSITORY_MENU_INDEX);
-//        assertEquals("Head First Java", router.getSelectedOption("1"));
-//    }
+    @Test
+    public void getsCheckOutBookOptionWhenOnBookLibraryPage() {
+        router.setState(BOOK_REPOSITORY_MENU_INDEX);
+        assertEquals(CHECK_OUT_BOOK, router.getSelectedOption("1"));
+    }
 
     @Test
-    public void returnsExitValueWhenOnBookRepoPage() {
+    public void returnsExitValueWhenOnBookLibraryPage() {
         router.setState(BOOK_REPOSITORY_MENU_INDEX);
         assertEquals(EXIT, router.getSelectedOption(EXIT_COMMAND));
     }
 
     @Test
-    public void returnsBackValueWhenOnBookRepoPage() {
+    public void returnsBackValueWhenOnBookLibraryPage() {
         router.setState(BOOK_REPOSITORY_MENU_INDEX);
         assertEquals(GO_BACK, router.getSelectedOption(GO_BACK_COMMAND));
     }

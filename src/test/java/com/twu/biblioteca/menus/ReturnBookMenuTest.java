@@ -1,17 +1,22 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.Router;
+import com.twu.biblioteca.repositories.BookLibrary;
 import org.junit.Test;
 
-import static com.twu.biblioteca.menus.BookRepositoryMenu.GO_BACK;
-import static com.twu.biblioteca.menus.BookRepositoryMenu.GO_BACK_COMMAND;
+import java.util.ArrayList;
+
+import static com.twu.biblioteca.menus.BookLibraryMenu.GO_BACK;
+import static com.twu.biblioteca.menus.BookLibraryMenu.GO_BACK_COMMAND;
 import static com.twu.biblioteca.menus.MainMenu.EXIT;
 import static org.junit.Assert.*;
 
 public class ReturnBookMenuTest {
 
-    ReturnBookMenu menu = new ReturnBookMenu();
-    Router router = new Router();
+    BookLibrary library = new BookLibrary(new ArrayList<>());
+    Router router = new Router(library);
+
+    ReturnBookMenu menu = new ReturnBookMenu(library);
 
     @Test
     public void menuShouldContain2OptionsToGoBackOrExit() {
@@ -29,15 +34,6 @@ public class ReturnBookMenuTest {
     public void executeRouterRequestShouldReturnGoBackWhenInputIsGoBackCommand() {
         assertEquals(GO_BACK, menu.executeRouterRequest(router, GO_BACK_COMMAND));
     }
-
-//    @Test
-//    public void executeRouterRequestShouldReturnBookNameWhenReturnIsSuccessful() throws Exception {
-//        BookRepository bookRepository = new BookRepository(new BookRepositoryMenu());
-//        bookRepository.checkOutBook("1");
-//        bookRepository = new BookRepository(menu);
-//        Book book1 = bookRepository.getBook("1");
-//        assertEquals(book1.getName(), menu.executeRouterRequest(router, "1"));
-//    }
 
 
 
