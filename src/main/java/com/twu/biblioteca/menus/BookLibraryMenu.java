@@ -68,8 +68,6 @@ public class BookLibraryMenu extends Menu {
             table.append(book.getAuthor());
             table.append(" ");
             table.append(book.getYear());
-            //            table.append(" ");
-            //            table.append(book.getStatus());
             table.append("\n");
         }
         return "\n" + checkOutMessage + "\nLIST OF BOOKS\n" + table.toString() +  "\nSELECT book number FOR Check Out.\n" + super.toString();

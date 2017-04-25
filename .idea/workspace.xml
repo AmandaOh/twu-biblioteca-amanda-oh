@@ -2,40 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4959d59-3a7c-4f84-8395-b74fe5a4e2df" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/MovieLibraryTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/MovieRepositoryTest.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/BookLibrary.java" afterPath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/Library.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/menus/BookLibraryMenuTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/menus/LibraryMenuTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/BookLibraryTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/LibraryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/InMemoryBooksDatabase.class" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/InMemoryBooksDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Router.class" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Router.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/menus/ReturnBookMenu.class" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/menus/ReturnBookMenu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/RouterTest.class" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/RouterTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/menus/MainMenuTest.class" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/menus/MainMenuTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/menus/ReturnBookMenuTest.class" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/menus/ReturnBookMenuTest.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/MovieLibrary.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/MovieLibraryTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.twu.biblioteca.menus.BookRepositoryMenuTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.twu.biblioteca.menus.BookRepositoryMenuTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.twu.biblioteca.repositories.BookRepositoryTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.twu.biblioteca.repositories.BookRepositoryTest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.twu.biblioteca.menus.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.twu.biblioteca.menus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.twu.biblioteca.repositories.html" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.twu.biblioteca.repositories.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.twu.biblioteca.menus.BookRepositoryMenuTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.twu.biblioteca.menus.BookRepositoryMenuTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.twu.biblioteca.repositories.BookRepositoryTest.xml" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.twu.biblioteca.repositories.BookRepositoryTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/BibliotecaApp.java" afterPath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/BibliotecaApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/InMemoryBooksDatabase.java" afterPath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/InMemoryBooksDatabase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/InMemoryMoviesDatabase.java" afterPath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/InMemoryMoviesDatabase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/Router.java" afterPath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/Router.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/BookLibraryMenu.java" afterPath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/BookLibraryMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/MovieMenu.java" afterPath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/MovieMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/ReturnBookMenu.java" afterPath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/ReturnBookMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/models/Loanable.java" afterPath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/models/Loanable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/models/Movie.java" afterPath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/models/Movie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/MovieLibrary.java" afterPath="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/MovieLibrary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/RouterTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/RouterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/menus/MainMenuTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/menus/MainMenuTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/menus/MovieMenuTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/menus/MovieMenuTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/menus/ReturnBookMenuTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/menus/ReturnBookMenuTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/LibraryTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/LibraryTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,11 +30,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="Library.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/Library.java">
+          <file leaf-file-name="MovieTest.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/java/com/twu/biblioteca/models/MovieTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+                <state relative-caret-position="570">
+                  <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -75,14 +46,12 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="MovieMenu.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/MovieMenu.java">
+          <file leaf-file-name="Book.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/models/Book.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="232">
-                  <caret line="66" column="42" lean-forward="false" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="60">
+                  <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -154,13 +123,10 @@
         <option value="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/models/BookTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/BookLibraryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/InMemoryBooksDatabase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/MovieLibrary.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/MovieRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/MovieRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/MovieLibraryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/InMemoryMoviesDatabase.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/BookLibrary.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/LibraryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/RouterTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/Router.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/BibliotecaApp.java" />
@@ -169,8 +135,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/Library.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/models/Loanable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/ReturnBookMenu.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/BookLibraryMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/MovieMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/MovieLibrary.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/MovieLibraryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/LibraryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/BookLibraryMenu.java" />
       </list>
     </option>
   </component>
@@ -890,23 +859,8 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BookTest - 2017.04.25 at 10h 21m 22s.xml">
-      <configuration name="BookTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookTest - 2017.04.25 at 10h 24m 27s.xml">
-      <configuration name="BookTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BookTest - 2017.04.25 at 10h 29m 38s.xml">
       <configuration name="BookTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MovieMenuTest - 2017.04.25 at 10h 06m 40s.xml">
-      <configuration name="MovieMenuTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MovieTest - 2017.04.25 at 10h 24m 34s.xml">
-      <configuration name="MovieTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MovieTest - 2017.04.25 at 10h 24m 41s.xml">
-      <configuration name="MovieTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MovieTest - 2017.04.25 at 10h 24m 49s.xml">
       <configuration name="MovieTest" configurationId="JUnit" />
@@ -920,21 +874,35 @@
     <history-entry file="com_twu_biblioteca_in_biblioteca - 2017.04.25 at 14h 08m 16s.xml">
       <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2017.04.25 at 16h 11m 29s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2017.04.25 at 16h 11m 52s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2017.04.25 at 16h 15m 12s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2017.04.25 at 16h 15m 37s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2017.04.25 at 16h 16m 17s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1440" height="785" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41269842" sideWeight="0.40057224" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41269842" sideWeight="0.39842632" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827586" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41269842" sideWeight="0.59942776" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41269842" sideWeight="0.6015737" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1305,24 +1273,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-          <folding>
-            <marker date="1492873755000" expanded="true" signature="42:117" ph="..." />
-            <marker date="1492873755000" expanded="false" signature="537:548" ph=" { " />
-            <marker date="1492873755000" expanded="false" signature="587:593" ph=" }" />
-            <marker date="1492873755000" expanded="false" signature="638:649" ph=" { " />
-            <marker date="1492873755000" expanded="false" signature="669:675" ph=" }" />
-            <marker date="1492873755000" expanded="true" signature="715:906" ph="{...}" />
-            <marker date="1492873755000" expanded="true" signature="937:1342" ph="{...}" />
-            <marker date="1492873755000" expanded="false" signature="1393:1404" ph=" { " />
-            <marker date="1492873755000" expanded="false" signature="1452:1458" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/twu/biblioteca/menus/MainMenuTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -1364,28 +1314,6 @@
         <state relative-caret-position="345">
           <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/twu/biblioteca/models/MovieTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding>
-            <marker date="1493087093000" expanded="true" signature="43:286" ph="..." />
-            <marker date="1493087093000" expanded="true" signature="440:451" ph=" { " />
-            <marker date="1493087093000" expanded="true" signature="495:501" ph=" }" />
-            <marker date="1493087093000" expanded="true" signature="556:567" ph=" { " />
-            <marker date="1493087093000" expanded="true" signature="603:609" ph=" }" />
-            <marker date="1493087093000" expanded="true" signature="669:680" ph=" { " />
-            <marker date="1493087093000" expanded="true" signature="733:739" ph=" }" />
-            <marker date="1493087093000" expanded="true" signature="803:814" ph=" { " />
-            <marker date="1493087093000" expanded="true" signature="850:856" ph=" }" />
-            <marker date="1493087093000" expanded="true" signature="938:1091" ph="{...}" />
-            <marker date="1493087093000" expanded="true" signature="1158:1169" ph=" { " />
-            <marker date="1493087093000" expanded="true" signature="1212:1218" ph=" }" />
-            <marker date="1493087093000" expanded="true" signature="1281:1384" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1463,41 +1391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/MovieLibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <marker date="1493089898000" expanded="true" signature="49:373" ph="..." />
-            <marker date="1493089898000" expanded="false" signature="664:675" ph=" { " />
-            <marker date="1493089898000" expanded="false" signature="696:702" ph=" }" />
-            <marker date="1493089898000" expanded="true" signature="769:1101" ph="{...}" />
-            <marker date="1493089898000" expanded="true" signature="1157:1379" ph="{...}" />
-            <marker date="1493089898000" expanded="true" signature="1410:2361" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/models/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <marker date="1493086776000" expanded="true" signature="304:393" ph="{...}" />
-            <marker date="1493086776000" expanded="false" signature="422:433" ph=" { " />
-            <marker date="1493086776000" expanded="false" signature="445:451" ph=" }" />
-            <marker date="1493086776000" expanded="false" signature="493:504" ph=" { " />
-            <marker date="1493086776000" expanded="false" signature="518:524" ph=" }" />
-            <marker date="1493086776000" expanded="false" signature="550:561" ph=" { " />
-            <marker date="1493086776000" expanded="false" signature="573:579" ph=" }" />
-            <marker date="1493086776000" expanded="false" signature="610:621" ph=" { " />
-            <marker date="1493086776000" expanded="false" signature="635:641" ph=" }" />
-            <marker date="1493086776000" expanded="false" signature="683:694" ph=" { " />
-            <marker date="1493086776000" expanded="false" signature="715:721" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/InMemoryBooksDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
@@ -1506,22 +1399,6 @@
             <marker date="1493088744000" expanded="true" signature="36:187" ph="..." />
             <marker date="1493088744000" expanded="true" signature="326:416" ph="{...}" />
             <marker date="1493088744000" expanded="true" signature="465:1370" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/LibraryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="48" column="40" lean-forward="false" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-          <folding>
-            <marker date="1493104815000" expanded="false" signature="49:312" ph="..." />
-            <marker date="1493104815000" expanded="true" signature="429:824" ph="{...}" />
-            <marker date="1493104815000" expanded="true" signature="908:1064" ph="{...}" />
-            <marker date="1493104815000" expanded="true" signature="1134:1339" ph="{...}" />
-            <marker date="1493104815000" expanded="true" signature="1460:1759" ph="{...}" />
-            <marker date="1493104815000" expanded="true" signature="1843:2064" ph="{...}" />
-            <marker date="1493104815000" expanded="true" signature="2142:2320" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1553,30 +1430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/models/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
-          <folding>
-            <marker date="1493100189000" expanded="true" signature="377:524" ph="{...}" />
-            <marker date="1493100189000" expanded="true" signature="595:852" ph="{...}" />
-            <marker date="1493100189000" expanded="false" signature="881:892" ph=" { " />
-            <marker date="1493100189000" expanded="false" signature="904:910" ph=" }" />
-            <marker date="1493100189000" expanded="false" signature="936:947" ph=" { " />
-            <marker date="1493100189000" expanded="false" signature="959:965" ph=" }" />
-            <marker date="1493100189000" expanded="false" signature="998:1009" ph=" { " />
-            <marker date="1493100189000" expanded="false" signature="1025:1031" ph=" }" />
-            <marker date="1493100189000" expanded="false" signature="1089:1100" ph=" { " />
-            <marker date="1493100189000" expanded="false" signature="1114:1120" ph=" }" />
-            <marker date="1493100189000" expanded="true" signature="1177:1435" ph="{...}" />
-            <marker date="1493100189000" expanded="false" signature="1477:1488" ph=" { " />
-            <marker date="1493100189000" expanded="false" signature="1509:1515" ph=" }" />
-            <marker date="1493100189000" expanded="false" signature="1546:1557" ph=" { " />
-            <marker date="1493100189000" expanded="false" signature="1571:1577" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/InMemoryMoviesDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1604,30 +1457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/MovieLibraryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding>
-            <marker date="1493089951000" expanded="true" signature="49:245" ph="..." />
-            <marker date="1493089951000" expanded="true" signature="369:810" ph="{...}" />
-            <marker date="1493089951000" expanded="true" signature="897:1065" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-          <folding>
-            <marker date="1492876178000" expanded="true" signature="42:259" ph="..." />
-            <marker date="1492876178000" expanded="true" signature="705:904" ph="{...}" />
-            <marker date="1492876178000" expanded="true" signature="988:1386" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/Router.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1645,22 +1474,157 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/Library.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/models/Loanable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
             <marker date="1493104984000" expanded="true" signature="81:122" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/models/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+          <folding>
+            <marker date="1493100189000" expanded="true" signature="377:524" ph="{...}" />
+            <marker date="1493100189000" expanded="true" signature="595:852" ph="{...}" />
+            <marker date="1493100189000" expanded="false" signature="881:892" ph=" { " />
+            <marker date="1493100189000" expanded="false" signature="904:910" ph=" }" />
+            <marker date="1493100189000" expanded="false" signature="936:947" ph=" { " />
+            <marker date="1493100189000" expanded="false" signature="959:965" ph=" }" />
+            <marker date="1493100189000" expanded="false" signature="998:1009" ph=" { " />
+            <marker date="1493100189000" expanded="false" signature="1025:1031" ph=" }" />
+            <marker date="1493100189000" expanded="false" signature="1089:1100" ph=" { " />
+            <marker date="1493100189000" expanded="false" signature="1114:1120" ph=" }" />
+            <marker date="1493100189000" expanded="true" signature="1177:1435" ph="{...}" />
+            <marker date="1493100189000" expanded="true" signature="1477:1488" ph=" { " />
+            <marker date="1493100189000" expanded="true" signature="1509:1515" ph=" }" />
+            <marker date="1493100189000" expanded="false" signature="1546:1557" ph=" { " />
+            <marker date="1493100189000" expanded="false" signature="1571:1577" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/MovieLibrary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="59" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/repositories/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="45" column="47" lean-forward="true" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+          <folding>
+            <marker date="1493104815000" expanded="true" signature="49:283" ph="..." />
+            <marker date="1493104815000" expanded="false" signature="433:444" ph=" { " />
+            <marker date="1493104815000" expanded="false" signature="471:477" ph=" }" />
+            <marker date="1493104815000" expanded="true" signature="547:897" ph="{...}" />
+            <marker date="1493104815000" expanded="true" signature="955:1364" ph="{...}" />
+            <marker date="1493104815000" expanded="true" signature="1412:1794" ph="{...}" />
+            <marker date="1493104815000" expanded="true" signature="1867:2008" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/MovieLibraryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/twu/biblioteca/models/MovieTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/twu/biblioteca/repositories/LibraryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="99" column="40" lean-forward="false" selection-start-line="99" selection-start-column="40" selection-end-line="99" selection-end-column="40" />
+          <folding>
+            <marker date="1493108175000" expanded="false" signature="49:352" ph="..." />
+            <marker date="1493108175000" expanded="true" signature="476:1357" ph="{...}" />
+            <marker date="1493108175000" expanded="true" signature="1441:1612" ph="{...}" />
+            <marker date="1493108175000" expanded="true" signature="1682:1894" ph="{...}" />
+            <marker date="1493108175000" expanded="true" signature="2015:2329" ph="{...}" />
+            <marker date="1493108175000" expanded="true" signature="2413:2649" ph="{...}" />
+            <marker date="1493108175000" expanded="true" signature="2727:2912" ph="{...}" />
+            <marker date="1493108175000" expanded="true" signature="2999:3171" ph="{...}" />
+            <marker date="1493108175000" expanded="true" signature="3257:3497" ph="{...}" />
+            <marker date="1493108175000" expanded="true" signature="3576:3763" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/BookLibraryMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="69" column="41" lean-forward="false" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
+          <folding>
+            <marker date="1493108209000" expanded="false" signature="42:347" ph="..." />
+            <marker date="1493108209000" expanded="true" signature="754:877" ph="{...}" />
+            <marker date="1493108209000" expanded="true" signature="961:1358" ph="{...}" />
+            <marker date="1493108209000" expanded="true" signature="1407:1533" ph="{...}" />
+            <marker date="1493108209000" expanded="true" signature="1600:1870" ph="{...}" />
+            <marker date="1493108209000" expanded="true" signature="1901:2566" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding>
+            <marker date="1492876178000" expanded="true" signature="42:259" ph="..." />
+            <marker date="1492876178000" expanded="true" signature="705:904" ph="{...}" />
+            <marker date="1492876178000" expanded="true" signature="988:1386" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-113">
+          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding>
+            <marker date="1492873755000" expanded="true" signature="42:117" ph="..." />
+            <marker date="1492873755000" expanded="true" signature="537:548" ph=" { " />
+            <marker date="1492873755000" expanded="true" signature="587:593" ph=" }" />
+            <marker date="1492873755000" expanded="false" signature="638:649" ph=" { " />
+            <marker date="1492873755000" expanded="false" signature="669:675" ph=" }" />
+            <marker date="1492873755000" expanded="true" signature="715:906" ph="{...}" />
+            <marker date="1492873755000" expanded="true" signature="937:1342" ph="{...}" />
+            <marker date="1492873755000" expanded="false" signature="1393:1404" ph=" { " />
+            <marker date="1492873755000" expanded="false" signature="1452:1458" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/MovieMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="42" lean-forward="false" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
+          <folding>
+            <marker date="1493105479000" expanded="true" signature="42:455" ph="..." />
+            <marker date="1493105479000" expanded="true" signature="672:795" ph="{...}" />
+            <marker date="1493105479000" expanded="true" signature="879:1245" ph="{...}" />
+            <marker date="1493105479000" expanded="true" signature="1294:1423" ph="{...}" />
+            <marker date="1493105479000" expanded="true" signature="1491:1772" ph="{...}" />
+            <marker date="1493105479000" expanded="true" signature="1803:2561" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1680,29 +1644,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/BookLibraryMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/models/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <marker date="1493105479000" expanded="false" signature="42:347" ph="..." />
-            <marker date="1493105479000" expanded="true" signature="754:877" ph="{...}" />
-            <marker date="1493105479000" expanded="true" signature="961:1358" ph="{...}" />
-            <marker date="1493105479000" expanded="true" signature="1407:1533" ph="{...}" />
-            <marker date="1493105479000" expanded="true" signature="1600:1870" ph="{...}" />
-            <marker date="1493105479000" expanded="true" signature="1901:2669" ph="{...}" />
-            <marker date="1493105479000" expanded="true" signature="2389:2479" ph="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twu/biblioteca/menus/MovieMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="66" column="42" lean-forward="false" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
