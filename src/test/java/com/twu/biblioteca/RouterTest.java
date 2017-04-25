@@ -1,7 +1,7 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.models.Book;
-import com.twu.biblioteca.repositories.BookLibrary;
+import com.twu.biblioteca.models.Loanable;
+import com.twu.biblioteca.repositories.Library;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -9,16 +9,18 @@ import java.util.List;
 
 import static com.twu.biblioteca.Router.BOOK_REPOSITORY_MENU_INDEX;
 import static com.twu.biblioteca.Router.MAIN_MENU_INDEX;
-import static com.twu.biblioteca.menus.BookLibraryMenu.CHECK_OUT_BOOK;
+import static com.twu.biblioteca.menus.BookLibraryMenu.*;
 import static com.twu.biblioteca.menus.BookLibraryMenu.GO_BACK;
 import static com.twu.biblioteca.menus.BookLibraryMenu.GO_BACK_COMMAND;
 import static com.twu.biblioteca.menus.MainMenu.*;
+import static com.twu.biblioteca.menus.MainMenu.EXIT;
+import static com.twu.biblioteca.menus.MainMenu.EXIT_COMMAND;
 import static org.junit.Assert.assertEquals;
 
 public class RouterTest {
 
-    List<Book> books = new ArrayList<>();
-    BookLibrary library = new BookLibrary(books);
+    List<Loanable> books = new ArrayList<>();
+    Library library = new Library(books);
     Router router = new Router(library);
 
 //    @Before

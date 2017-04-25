@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.models.Loanable;
 import com.twu.biblioteca.models.Movie;
 
 import java.util.ArrayList;
@@ -7,13 +8,13 @@ import java.util.List;
 
 public class InMemoryMoviesDatabase {
 
-    private static List<Movie> movies;
+    private static List<Loanable> movies;
 
-    public static synchronized List<Movie> getMovies() {
+    public static synchronized List<Loanable> getMovies() {
         return movies == null? InMemoryMoviesDatabase.initialize() : movies;
     }
 
-    private static List<Movie> initialize() {
+    private static List<Loanable> initialize() {
         movies = new ArrayList<>();
         Movie movie1 = new Movie("La La Land", 2016, "Damien Chazelle", 10);
         Movie movie2 = new Movie("The Fate of the Furious", 2017, "F. Gary Gray");

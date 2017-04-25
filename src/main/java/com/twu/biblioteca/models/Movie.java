@@ -59,11 +59,11 @@ public class Movie implements Loanable{
         }
     }
 
-    public void setStatus(Book.Status status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
-    public Book.Status getStatus() {
+    public Status getStatus() {
         return status;
     }
 }

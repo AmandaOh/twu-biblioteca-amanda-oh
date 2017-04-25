@@ -1,7 +1,7 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.Router;
-import com.twu.biblioteca.repositories.BookLibrary;
+import com.twu.biblioteca.repositories.Library;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -49,7 +49,7 @@ public class MainMenuTest {
 
     @Test
     public void executeRequestShouldReturnOnlyValidOptionsForMainMenu() {
-        BookLibrary library = new BookLibrary(new ArrayList<>());
+        Library library = new Library(new ArrayList<>());
         Router router = new Router(library);
         assertEquals(BOOK_LIST, menu.executeRouterRequest(router, BOOK_LIST_COMMAND));
         assertEquals(EXIT, menu.executeRouterRequest(router, EXIT_COMMAND));

@@ -1,7 +1,7 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.Router;
-import com.twu.biblioteca.repositories.BookLibrary;
+import com.twu.biblioteca.repositories.Library;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -11,11 +11,11 @@ import static com.twu.biblioteca.menus.BookLibraryMenu.GO_BACK;
 import static org.junit.Assert.assertEquals;
 
 
-public class BookLibraryMenuTest {
+public class LibraryMenuTest {
 
 
 
-    BookLibrary library = new BookLibrary(new ArrayList<>());
+    Library library = new Library(new ArrayList<>());
     BookLibraryMenu menu = new BookLibraryMenu(library);
     Router router = new Router(library);
 

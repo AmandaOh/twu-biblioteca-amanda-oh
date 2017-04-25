@@ -1,6 +1,7 @@
 package com.twu.biblioteca.repositories;
 
 import com.twu.biblioteca.InMemoryMoviesDatabase;
+import com.twu.biblioteca.models.Loanable;
 import com.twu.biblioteca.models.Movie;
 
 import java.util.List;
@@ -11,46 +12,51 @@ import static com.twu.biblioteca.models.Loanable.Status.NOT_AVAILABLE;
 
 public class MovieLibrary {
 
-    private List<Movie> movies = InMemoryMoviesDatabase.getMovies().stream().filter(movie -> movie.getStatus() == AVAILABLE).collect(Collectors.toList());;
+    private Loanable.Status moviesStatus = AVAILABLE;
+    private List<Loanable> movies = InMemoryMoviesDatabase.getMovies().stream().filter(movie -> movie.getStatus() == AVAILABLE).collect(Collectors.toList());;
 
-    public Movie getMovie(String selection) throws Exception {
+    public MovieLibrary(List<Loanable> movies) {
+        this.movies = movies;
+    }
+
+    private Loanable getMovie(String selection) throws Exception {
         int index;
-        Movie book;
+        Loanable movie;
         try {
             index = Integer.parseInt(selection) - 1;
-            book = movies.get(index);
+            movie = movies.get(index);
         } catch (ArrayIndexOutOfBoundsException e) {
-            book = null;
+            movie = null;
         } catch (NumberFormatException e) {
             throw e;
         }
-        return book;
+        return movie;
     }
 
-    public String checkOutMovie(String movieNumber) {
-        String movieName;
+    public Loanable checkOutMovie(String movieNumber) {
+        Loanable movie;
         try {
-            Movie movieToCheckOut = getMovie(movieNumber);
-            movieName = movieToCheckOut.getName();
-            movieToCheckOut.setStatus(NOT_AVAILABLE);
+            movie = getMovie(movieNumber);
+            movie.setStatus(NOT_AVAILABLE);
         } catch (Exception e) {
-            movieName = null;
+            movie = null;
         }
-        return movieName;
+        return movie;
     }
 
     public String toString() {
         movies = InMemoryMoviesDatabase.getMovies().stream().filter(movie -> movie.getStatus() == AVAILABLE).collect(Collectors.toList());
         StringBuilder moviesTable = new StringBuilder();
         for (int i = 0; i < movies.size(); i++) {
+            Movie movie = (Movie) movies.get(i);
             moviesTable.append(Integer.toString(i + 1) + "|");
-            moviesTable.append(movies.get(i).getName());
+            moviesTable.append(movie.getName());
             moviesTable.append(" ");
-            moviesTable.append(movies.get(i).getYear());
+            moviesTable.append(movie.getYear());
             moviesTable.append(" ");
-            moviesTable.append(movies.get(i).getDirector());
+            moviesTable.append(movie.getDirector());
             moviesTable.append(" ");
-            int movieRating = movies.get(i).getRating();
+            int movieRating = movie.getRating();
             if (movieRating == 0) {
                 moviesTable.append("Unrated");
             } else {

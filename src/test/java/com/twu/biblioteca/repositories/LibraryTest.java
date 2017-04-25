@@ -1,6 +1,7 @@
 package com.twu.biblioteca.repositories;
 
 import com.twu.biblioteca.models.Book;
+import com.twu.biblioteca.models.Loanable;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -10,9 +11,9 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-public class BookLibraryTest {
+public class LibraryTest {
 
-    List<Book> books = new ArrayList<>();
+    List<Loanable> books = new ArrayList<>();
 
     private void loadBooksForTestCase() {
         Book book1 = new Book("Moneyball", new ArrayList<>(Arrays.asList("Michael Lewis")), 2003);
@@ -26,44 +27,44 @@ public class BookLibraryTest {
     @Test
     public void checkOutBookReturnBookWhenSuccessful() throws Exception {
         loadBooksForTestCase();
-        BookLibrary library = new BookLibrary(books);
-        assertEquals(books.get(0), library.checkOutBook("1"));
+        Library library = new Library(books);
+        assertEquals(books.get(0), library.checkOut("1", Book.class));
     }
 
 
     @Test
     public void checkOutBookReturnsNullIfNOTSuccessful() {
         loadBooksForTestCase();
-        BookLibrary library = new BookLibrary(books);
-        assertNull(library.checkOutBook("23948"));
-        assertNull(library.checkOutBook("sdrgkjn"));
+        Library library = new Library(books);
+        assertNull(library.checkOut("23948", Book.class));
+        assertNull(library.checkOut("sdrgkjn", Book.class));
     }
 
     @Test
     public void checkedOutBookStatusIsAvailableBeforeCheckOutAndNOTAvailableAfterCheckOut() throws Exception {
         loadBooksForTestCase();
-        BookLibrary library = new BookLibrary(books);
-        Book book1 = books.get(0);
+        Library library = new Library(books);
+        Loanable book1 = books.get(0);
         assertEquals(Book.Status.AVAILABLE, book1.getStatus());
-        library.checkOutBook("1");
+        library.checkOut("1", Book.class);
         assertEquals(Book.Status.NOT_AVAILABLE, book1.getStatus());
     }
 
     @Test
     public void returnsBookForSuccessfulReturnOfBook() throws Exception {
         loadBooksForTestCase();
-        BookLibrary library = new BookLibrary(books);
-        Book book1 = books.get(0);
-        library.checkOutBook("1");
-        assertEquals(book1, library.returnBook("1"));
+        Library library = new Library(books);
+        Loanable book1 = books.get(0);
+        library.checkOut("1",Book.class );
+        assertEquals(book1, library.returnItem("1"));
     }
 
     @Test
     public void returnsNullForFailReturnOfBook() throws Exception {
         loadBooksForTestCase();
-        BookLibrary library = new BookLibrary(books);
-        library.checkOutBook("1");
-        assertNull(library.returnBook("234435"));
+        Library library = new Library(books);
+        library.checkOut("1", Book.class);
+        assertNull(library.returnItem("234435"));
     }
 
 }

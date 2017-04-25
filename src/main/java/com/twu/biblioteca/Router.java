@@ -1,7 +1,7 @@
 package com.twu.biblioteca;
 
 import com.twu.biblioteca.menus.*;
-import com.twu.biblioteca.repositories.BookLibrary;
+import com.twu.biblioteca.repositories.Library;
 
 public class Router {
 
@@ -13,8 +13,8 @@ public class Router {
     private Menu[] menus;
     private Menu currentMenu;
 
-    public Router(BookLibrary library) {
-        menus = new Menu[]{new MainMenu(), new BookLibraryMenu(library), new ReturnBookMenu(library), new MovieMenu()};
+    public Router(Library library) {
+        menus = new Menu[]{new MainMenu(), new BookLibraryMenu(library), new ReturnBookMenu(library), new MovieMenu(library)};
         currentMenu = menus[0];
     }
 

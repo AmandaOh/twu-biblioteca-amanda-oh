@@ -1,7 +1,7 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.Router;
-import com.twu.biblioteca.repositories.BookLibrary;
+import com.twu.biblioteca.repositories.Library;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -12,8 +12,8 @@ import static org.junit.Assert.assertEquals;
 
 public class MovieMenuTest {
 
-    BookLibrary library = new BookLibrary(new ArrayList<>());
-    MovieMenu menu = new MovieMenu();
+    Library library = new Library(new ArrayList<>());
+    MovieMenu menu = new MovieMenu(library);
     Router router = new Router(library);
 
     @Test

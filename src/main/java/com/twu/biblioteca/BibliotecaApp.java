@@ -1,9 +1,10 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.models.Book;
-import com.twu.biblioteca.repositories.BookLibrary;
+import com.twu.biblioteca.models.Loanable;
+import com.twu.biblioteca.repositories.Library;
 import com.twu.biblioteca.utils.CommandLineInputHelper;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -33,8 +34,11 @@ public class BibliotecaApp {
     }
 
     private static Router initializeApp() {
-        List<Book> staticBookData = InMemoryBooksDatabase.getBooks();
-        BookLibrary library = new BookLibrary(staticBookData);
+        List<Loanable> staticBookData = InMemoryBooksDatabase.getBooks();
+        List<Loanable> staticMovieData = InMemoryMoviesDatabase.getMovies();
+        List<Loanable> allLoanableItems = new ArrayList<>(staticBookData);
+        allLoanableItems.addAll(staticMovieData);
+        Library library = new Library(allLoanableItems);
         Router router = new Router(library);
         System.out.println(router.getPrintedResponse());
         return router;

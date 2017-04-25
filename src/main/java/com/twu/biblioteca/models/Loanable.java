@@ -6,6 +6,8 @@ public interface Loanable {
         AVAILABLE, NOT_AVAILABLE;
     }
 
+    String getName();
+
     Status getStatus();
 
     void setStatus(Status status);

@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import com.twu.biblioteca.models.Book;
+import com.twu.biblioteca.models.Loanable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,13 +9,13 @@ import java.util.List;
 
 public class InMemoryBooksDatabase {
 
-    private static List<Book> books;
+    private static List<Loanable> books;
 
-    public static synchronized List<Book> getBooks() {
+    public static synchronized List<Loanable> getBooks() {
         return books == null ? books = InMemoryBooksDatabase.initialize() : books;
     }
 
-    private static List<Book> initialize() {
+    private static List<Loanable> initialize() {
         books = new ArrayList<>();
         Book book1 = new Book("Head First Java", new ArrayList<>(Arrays.asList("Kathy Sierra", "Bert Bates")), 2001);
         Book book2 = new Book("Moby Dick", new ArrayList<>(Arrays.asList("Herman Melville")), 1851);
@@ -29,10 +30,6 @@ public class InMemoryBooksDatabase {
         books.add(book5);
         books.add(book6);
         return books;
-    }
-
-    public Book findById(String id) {
-        return books.get(Integer.parseInt(id));
     }
 
 }
