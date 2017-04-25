@@ -6,24 +6,15 @@ import com.twu.biblioteca.models.Book;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.twu.biblioteca.models.Book.Status.AVAILABLE;
-import static com.twu.biblioteca.models.Book.Status.NOT_AVAILABLE;
+import static com.twu.biblioteca.models.Loanable.Status.AVAILABLE;
+import static com.twu.biblioteca.models.Loanable.Status.NOT_AVAILABLE;
 
 public class BookLibrary {
 
-    //figure out how to stream available books from here
     private Book.Status bookStatus = AVAILABLE;
     private List<Book> books;
 
     public BookLibrary(List<Book> books) {
-//        if (source instanceof BookLibraryMenu) {
-//            bookStatus = AVAILABLE;
-//            otherBookStatus = NOT_AVAILABLE;
-//        }
-//        else if (source instanceof ReturnBookMenu) {
-//            bookStatus = NOT_AVAILABLE;
-//            otherBookStatus = AVAILABLE;
-//        }
         this.books = books;
     }
 

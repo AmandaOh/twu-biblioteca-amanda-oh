@@ -1,14 +1,14 @@
 package com.twu.biblioteca.menus;
 
 import com.twu.biblioteca.Router;
-import com.twu.biblioteca.repositories.MovieRepository;
+import com.twu.biblioteca.repositories.MovieLibrary;
 
 import static com.twu.biblioteca.menus.BookLibraryMenu.FAIL_CHECK_OUT_MESSAGE;
 import static com.twu.biblioteca.menus.BookLibraryMenu.SUCCESSFUL_CHECK_OUT_MESSAGE;
 
 public class MovieMenu extends Menu {
 
-    private MovieRepository moviesRepository = new MovieRepository();
+    private MovieLibrary moviesRepository = new MovieLibrary();
     private String movieReturnMessage = "";
 
     public MovieMenu() {

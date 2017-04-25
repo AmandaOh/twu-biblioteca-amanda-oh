@@ -2,11 +2,7 @@ package com.twu.biblioteca.models;
 
 import java.util.ArrayList;
 
-public class Book {
-
-    public enum Status {
-        AVAILABLE, NOT_AVAILABLE;
-    }
+public class Book implements Loanable {
 
     private String name;
     private ArrayList<String> author;

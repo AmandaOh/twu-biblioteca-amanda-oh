@@ -6,10 +6,10 @@ import com.twu.biblioteca.models.Movie;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.twu.biblioteca.models.Book.Status.AVAILABLE;
-import static com.twu.biblioteca.models.Book.Status.NOT_AVAILABLE;
+import static com.twu.biblioteca.models.Loanable.Status.AVAILABLE;
+import static com.twu.biblioteca.models.Loanable.Status.NOT_AVAILABLE;
 
-public class MovieRepository {
+public class MovieLibrary {
 
     private List<Movie> movies = InMemoryMoviesDatabase.getMovies().stream().filter(movie -> movie.getStatus() == AVAILABLE).collect(Collectors.toList());;
 
@@ -25,6 +25,18 @@ public class MovieRepository {
             throw e;
         }
         return book;
+    }
+
+    public String checkOutMovie(String movieNumber) {
+        String movieName;
+        try {
+            Movie movieToCheckOut = getMovie(movieNumber);
+            movieName = movieToCheckOut.getName();
+            movieToCheckOut.setStatus(NOT_AVAILABLE);
+        } catch (Exception e) {
+            movieName = null;
+        }
+        return movieName;
     }
 
     public String toString() {
@@ -49,15 +61,4 @@ public class MovieRepository {
         return "LIST OF MOVIES\n" + moviesTable.toString();
     }
 
-    public String checkOutMovie(String movieNumber) {
-        String movieName;
-        try {
-            Movie movieToCheckOut = getMovie(movieNumber);
-            movieName = movieToCheckOut.getName();
-            movieToCheckOut.setStatus(NOT_AVAILABLE);
-        } catch (Exception e) {
-            movieName = null;
-        }
-        return movieName;
-    }
 }

@@ -1,8 +1,8 @@
 package com.twu.biblioteca.models;
 
-import static com.twu.biblioteca.models.Book.Status.AVAILABLE;
+import static com.twu.biblioteca.models.Loanable.Status.AVAILABLE;
 
-public class Movie {
+public class Movie implements Loanable{
 
     public static final int UNRATED = 0;
 

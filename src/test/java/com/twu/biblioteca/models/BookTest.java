@@ -1,12 +1,12 @@
 package com.twu.biblioteca.models;
 
-import com.twu.biblioteca.models.Book;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class BookTest {
 
@@ -20,10 +20,22 @@ public class BookTest {
 
 
     @Test
+    public void getsYearOfBook() {
+        assertEquals(2001, javaBook.getYear());
+    }
+
+    @Test
+    public void getsDirectorOfBook() {
+        assertEquals(authors, javaBook.getAuthor());
+    }
+
+    @Test
     public void canBeFlaggedAsAvailableOrNot() {
         javaBook.setStatus(Book.Status.NOT_AVAILABLE);
         assertEquals(Book.Status.NOT_AVAILABLE, javaBook.getStatus());
         javaBook.setStatus(Book.Status.AVAILABLE);
         assertEquals(Book.Status.AVAILABLE, javaBook.getStatus());
     }
+
+
 }
