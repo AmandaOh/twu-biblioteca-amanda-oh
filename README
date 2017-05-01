@@ -2,7 +2,4 @@ Assumptions:
     - User is only able to check out one book at a time.
     - User is only able to return one book at a time.
 
-    TODO:
-    -Write tests for movies
-    -Figure out mock objects to generate static data of repositories in test
-    -Refactor duplicate code in book and movies repositories
+    -Library Number is Unique (no two users can have the same library number)

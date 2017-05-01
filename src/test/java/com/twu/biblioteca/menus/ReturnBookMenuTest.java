@@ -1,10 +1,12 @@
 package com.twu.biblioteca.menus;
 
+import com.twu.biblioteca.Authenticator;
 import com.twu.biblioteca.Router;
 import com.twu.biblioteca.repositories.Library;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import static com.twu.biblioteca.menus.BookLibraryMenu.GO_BACK;
 import static com.twu.biblioteca.menus.BookLibraryMenu.GO_BACK_COMMAND;
@@ -13,8 +15,9 @@ import static org.junit.Assert.*;
 
 public class ReturnBookMenuTest {
 
+    Authenticator authenticator = new Authenticator(new HashMap<>());
     Library library = new Library(new ArrayList<>());
-    Router router = new Router(library);
+    Router router = new Router(authenticator, library);
 
     ReturnBookMenu menu = new ReturnBookMenu(library);
 

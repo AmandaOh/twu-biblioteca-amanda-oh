@@ -70,7 +70,7 @@ public class BookLibraryMenu extends Menu {
             table.append(book.getYear());
             table.append("\n");
         }
-        return "\n" + checkOutMessage + "\nLIST OF BOOKS\n" + table.toString() +  "\nSELECT book number FOR Check Out.\n" + super.toString();
+        return "\n" + checkOutMessage + "\nLIST OF BOOKS\n" + table.toString() +  "\nSELECT book number FOR Check Out.\n" + super.toString() + "Please key your selection here: ";
     }
 
 }

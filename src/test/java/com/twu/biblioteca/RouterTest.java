@@ -5,6 +5,7 @@ import com.twu.biblioteca.repositories.Library;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static com.twu.biblioteca.Router.BOOK_REPOSITORY_MENU_INDEX;
@@ -21,7 +22,8 @@ public class RouterTest {
 
     List<Loanable> books = new ArrayList<>();
     Library library = new Library(books);
-    Router router = new Router(library);
+    Authenticator authenticator = new Authenticator(new HashMap<>());
+    Router router = new Router(authenticator, library);
 
 //    @Before
 //    public void loadBooksForTestCase() {

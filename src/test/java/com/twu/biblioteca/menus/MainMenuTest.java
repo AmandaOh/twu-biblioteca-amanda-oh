@@ -1,10 +1,12 @@
 package com.twu.biblioteca.menus;
 
+import com.twu.biblioteca.Authenticator;
 import com.twu.biblioteca.Router;
 import com.twu.biblioteca.repositories.Library;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import static com.twu.biblioteca.menus.MainMenu.*;
 import static org.junit.Assert.assertEquals;
@@ -16,8 +18,8 @@ public class MainMenuTest {
     MainMenu menu = new MainMenu();
 
     @Test
-    public void getOptionsShouldHaveOnlyFourOptions() throws Exception {
-        assertTrue(menu.getOptions().size() == 4);
+    public void getOptionsShouldHaveOnlyFiveOptions() throws Exception {
+        assertTrue(menu.getOptions().size() == 5);
     }
 
     @Test
@@ -50,7 +52,8 @@ public class MainMenuTest {
     @Test
     public void executeRequestShouldReturnOnlyValidOptionsForMainMenu() {
         Library library = new Library(new ArrayList<>());
-        Router router = new Router(library);
+        Authenticator authenticator = new Authenticator(new HashMap<>());
+        Router router = new Router(authenticator, library);
         assertEquals(BOOK_LIST, menu.executeRouterRequest(router, BOOK_LIST_COMMAND));
         assertEquals(EXIT, menu.executeRouterRequest(router, EXIT_COMMAND));
         assertEquals(NO_SUCH_OPTION, menu.executeRouterRequest(router, "b"));

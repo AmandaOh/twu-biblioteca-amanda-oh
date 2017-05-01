@@ -82,7 +82,7 @@ public class ReturnBookMenu extends Menu {
             movieTable.append(movie.getYear());
             movieTable.append("\n");
         }
-        return returnMessage + "\nBORROWED BOOKS\n" + bookTable.toString() + "\nBORROWED MOVIES\n" + movieTable.toString() + "\nSELECT item number FOR returns.\n" + super.toString();
+        return returnMessage + "\nBORROWED BOOKS\n" + bookTable.toString() + "\nBORROWED MOVIES\n" + movieTable.toString() + "\nSELECT item number FOR returns.\n" + super.toString() + "Please key your selection here: ";
     }
 
 }

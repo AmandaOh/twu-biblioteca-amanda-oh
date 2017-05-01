@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.databases;
 
 import com.twu.biblioteca.models.Loanable;
 import com.twu.biblioteca.models.Movie;

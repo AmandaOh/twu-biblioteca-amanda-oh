@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.databases;
 
 import com.twu.biblioteca.models.Book;
 import com.twu.biblioteca.models.Loanable;

@@ -67,6 +67,6 @@ public class MovieMenu extends Menu {
             table.append(movie.getRating());
             table.append("\n");
         }
-        return  "\n" + movieReturnMessage + "\nLIST OF MOVIES\n" + table.toString() + "\nSELECT movie number FOR Check Out.\n" + super.toString();
+        return  "\n" + movieReturnMessage + "\nLIST OF MOVIES\n" + table.toString() + "\nSELECT movie number FOR Check Out.\n" + super.toString() + "Please key your selection here: ";
     }
 }
